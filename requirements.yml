@@ -1,0 +1,4 @@
+name: argparse_yaml
+dependencies:
+    - python=3.5
+    - pyyaml

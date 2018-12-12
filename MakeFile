@@ -1,0 +1,11 @@
+CMD := python main.py -c config.yaml
+
+test:
+	${CMD} -bs 64
+
+resnet:
+	${CMD} -bs 16 -ne 20
+	${CMD} -bs 16 -ne 40
+	${CMD} -ne 20 -mt "resnet34"
+	${CMD} -ne 20 -mt "resnet34"
+	${CMD} -bs 64 -ne 100 -mt "resnet34"
