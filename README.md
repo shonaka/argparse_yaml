@@ -18,3 +18,6 @@ make -f MakeFile
 ```
 make -f MakeFile resnet
 ```
+
+## Acknowledgement
+Thanks to [Akitomo](https://twitter.com/akitomo_cs) and [Daichi](https://twitter.com/daich1888) for valuable feedback.

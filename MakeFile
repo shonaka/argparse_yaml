@@ -1,7 +1,7 @@
 CMD := python main.py -c config.yaml
 
 test:
-	${CMD} -bs 64
+	${CMD} --batch_size 64
 
 resnet:
 	${CMD} -bs 16 -ne 20
