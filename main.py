@@ -59,6 +59,6 @@ def flatten_dict(var_dict, parent_key='', sep='_'):
 
 
 if __name__ == '__main__':
-    parser = get_parser("Testing argparse yaml overwrite.", "config.yaml")
+parser = get_parser("Testing argparse yaml overwrite.", "config.yaml")
     args = get_args(parser)
     print(args)
