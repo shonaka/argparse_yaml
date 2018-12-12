@@ -1,11 +1,19 @@
 CMD := python main.py -c config.yaml
+CMDN := python main.py -c nested_config.yaml
 
 test:
 	${CMD} --batch_size 64
 
+nested:
+	${CMDN} --batch_size 64
+
+cnn:
+	${CMDN} --batch_size 64 --cnn_layer_init_type "xavier_normal_"
+	${CMDN} --batch_size 64 --cnn_num_layers 8
+
 resnet:
-	${CMD} -bs 16 -ne 20
-	${CMD} -bs 16 -ne 40
-	${CMD} -ne 20 -mt "resnet34"
-	${CMD} -ne 20 -mt "resnet34"
-	${CMD} -bs 64 -ne 100 -mt "resnet34"
+	${CMDN} --batch_size 16 --num_epochs 20
+	${CMDN} --batch_size 16 --num_epochs 40
+	${CMDN} --num_epochs 20 --resnet_model_type "resnet34"
+	${CMDN} --num_epochs 20 --resnet_model_type "resnet34"
+	${CMDN} --batch_size 64 --num_epochs 100 --resnet_model_type "resnet34"

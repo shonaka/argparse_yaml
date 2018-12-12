@@ -14,7 +14,17 @@ make -f MakeFile
 make -f MakeFile
 ```
 
-### If you want to perform the experiment
+### If you want to check how nested YAML is handled
+```
+make -f MakeFile nested
+```
+
+### If you want to experiment with cnn (nested)
+```
+make -f MakeFile cnn
+```
+
+### If you want to experiment with resnet (nested)
 ```
 make -f MakeFile resnet
 ```

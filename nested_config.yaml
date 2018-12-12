@@ -1,0 +1,13 @@
+learning_rate: 1e-3
+batch_size: 32
+num_epochs: 25
+
+cnn:
+  num_layers: 3
+  layer_init:
+    type: 'normal'
+    mean: 0
+    std: 0.1
+
+resnet:
+  model_type: 'resnet18'
