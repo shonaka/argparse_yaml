@@ -32,6 +32,7 @@ def get_args(parser):
         # Unroll what's inside the yaml
         opt_args = [['--' + key] for key, _ in flat_defaults.items()]
         opt_kwargs = [{'dest': key, 'type': type(value), 'default': value} for key, value in flat_defaults.items()]
+        pdb.set_trace()
         # Put the unrolled arguments into parser
         for p_args, p_kwargs in zip(opt_args, opt_kwargs):
             parser.add_argument(*p_args, **p_kwargs)
@@ -59,6 +60,7 @@ def flatten_dict(var_dict, parent_key='', sep='_'):
 
 
 if __name__ == '__main__':
-parser = get_parser("Testing argparse yaml overwrite.", "config.yaml")
+    parser = get_parser("Testing argparse yaml overwrite.", "config.yaml")
     args = get_args(parser)
     print(args)
+    print(args.batch_size)

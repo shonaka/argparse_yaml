@@ -1,4 +1,4 @@
-learning_rate: 1e-3
+learning_rate: 0.001 # The only problem right now is that 1e-3 would be converted to str type
 batch_size: 32
 num_epochs: 25
 
